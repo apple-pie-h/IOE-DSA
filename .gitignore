@@ -1,3 +1,9 @@
-.exe
-.obj
-.class
+*.exe
+*.obj
+*.class
+
+# Ignore executables with no extension
+deletion
+insertion
+fib
+toh
