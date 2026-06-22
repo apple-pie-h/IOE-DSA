@@ -1,11 +1,11 @@
 import java.util.*;
 
 class fib{
-    static int fib(int n){
+    static int fibseries(int n){
         if(n<=1){
             return n;
         }
-        return fib(n-1)+fib(n-2);
+        return fibseries(n-1)+fibseries(n-2);
     }
     static void printfib(int n){
         if (n < 0) {
@@ -13,7 +13,7 @@ class fib{
             return;
         }
         for(int i=0;i<n;i++){
-            System.out.print(fib(i)+" ");
+            System.out.print(fibseries(i)+" ");
         }
     }
     public static void main(String[] args) {

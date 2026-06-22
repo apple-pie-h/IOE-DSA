@@ -1,5 +1,5 @@
 class deletion{
-    static int deletion(int arr[], int n, int index){
+    static int deleteElement(int arr[], int n, int index){
         if (index < 0 || index >= n) {
             System.out.println("Invalid index");
             return n;
@@ -24,7 +24,7 @@ class deletion{
         int index = 2; 
         System.out.println("Original array:");
         printArray(arr, n);
-        n= deletion(arr, n, index);
+        n= deleteElement(arr, n, index);
         System.out.println("Array after deletion:");
         printArray(arr, n);
     }

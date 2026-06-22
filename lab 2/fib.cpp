@@ -3,10 +3,6 @@ using namespace std;
 
 int fib(int n)
 {
-    if (n < 0)
-    {
-        return -1; // Invalid input
-    }
     if (n == 0)
     {
         return 0;
@@ -20,11 +16,6 @@ int fib(int n)
 
 void printfib(int n)
 {
-    if (n < 0)
-    {
-        cout << "Invalid input" << endl;
-    }
-
     if (n == 0 | n == 1)
     {
         cout << n << endl;
@@ -42,9 +33,14 @@ int main()
     int n;
     cout << "Enter the number of terms: ";
     cin >> n;
-
-    cout << "Fibonacci series: ";
-    printfib(n);
-
+    if (n < 0)
+    {
+        cout << "Invalid input" << endl;
+    }
+    else
+    {
+        cout << "Fibonacci series: ";
+        printfib(n);
+    }
     return 0;
 }

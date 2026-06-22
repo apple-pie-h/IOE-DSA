@@ -1,5 +1,5 @@
-class insertion{
-    static void insertion(int arr[], int n, int element, int index){
+class insertion {
+    static void insertElement(int arr[], int n, int element, int index) {
         if (index < 0 || index > n) {
             System.out.println("Invalid index");
             return;
@@ -8,7 +8,7 @@ class insertion{
             arr[i + 1] = arr[i];
         }
         arr[index] = element;
-    }  
+    }
 
     static void printArray(int arr[], int n) {
         for (int i = 0; i < n; i++) {
@@ -18,14 +18,14 @@ class insertion{
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5}; 
-        int n = 5; 
-        int element = 10; 
-        int index = 2; 
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int n = 5;
+        int element = 10;
+        int index = 2;
         System.out.println("Original array:");
         printArray(arr, n);
-        insertion(arr, n, element, index);
-        n++; 
+        insertElement(arr, n, element, index);
+        n++;
         System.out.println("Array after insertion:");
         printArray(arr, n);
     }
