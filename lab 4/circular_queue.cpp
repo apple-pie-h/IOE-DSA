@@ -2,22 +2,28 @@
 using namespace std;
 
 int queue[5];
-int front = 0;
-int rear = 0;
+int front = -1;
+int rear = -1;
 int size = 5;
 
 void enqueue(int x) {
-    if (front == (rear + 1) % size)
-        cout << "Queue is Full\n";
-    else {
+    if ((rear + 1) % size == front)
+        cout << "Queue is Full" << endl;
+    else if (front == -1) {
+        front = rear = 0;
         queue[rear] = x;
+    }
+    else {
         rear = (rear + 1) % size;
+        queue[rear] = x;
     }
 }
 
 void dequeue() {
-    if (front == rear)
-        cout << "Queue is Empty\n";
+    if (front == -1)
+        cout << "Queue is Empty" << endl;
+    else if (front == rear)
+        front = rear = -1;
     else
         front = (front + 1) % size;
 }
