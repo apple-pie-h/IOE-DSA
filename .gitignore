@@ -1,6 +1,7 @@
 *.exe
 *.obj
 *.class
+.vscode
 
 # Ignore executables with no extension
 deletion
@@ -9,3 +10,4 @@ fib
 toh
 pop
 push
+queue
